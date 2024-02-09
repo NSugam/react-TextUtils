@@ -3,6 +3,9 @@ import './App.css';
 import NavBar from './components/NavBar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
+import ContactPage from './components/ContactPage';
+import {BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 
 function App() {
   const [mode, setMode] = useState('light')
@@ -37,11 +40,18 @@ function App() {
 
   return (
   <>
+    <Router>
+
       <NavBar title="TextUtils ReactJS" mode={mode} toggleMode={toggleMode}/>
       <Alert alert={alert}/>
-      <div className="container mt-5">
-        <TextForm mode={mode} showAlert={showAlert}/>
-      </div>
+  
+      <Routes>
+        <Route exact path="/" element={<TextForm mode={mode} showAlert={showAlert}/>} />
+        <Route exact path="/contact" element={<ContactPage />} />
+      </Routes>
+
+    </Router>
+
   </>
   );
 }
