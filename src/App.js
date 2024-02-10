@@ -47,7 +47,7 @@ function App() {
   
       <Routes>
         <Route exact path="/" element={<TextForm mode={mode} showAlert={showAlert}/>} />
-        <Route exact path="/contact" element={<ContactPage />} />
+        <Route exact path="/about" element={<ContactPage mode={mode}/>} />
       </Routes>
 
     </Router>

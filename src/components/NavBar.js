@@ -20,7 +20,7 @@ export default function NavBar(props) {
             <Link className="nav-link" aria-current="page" to="/">Home</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" aria-current="page" to="/contact">Contact</Link>
+            <Link className="nav-link" aria-current="page" to="/about">About</Link>
           </li>
           <li className="nav-item">
             <a className="nav-link" aria-current="page" href="https://neupanesugam.com.np/" target='_blank'>Portfolio</a>

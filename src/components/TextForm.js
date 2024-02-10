@@ -39,7 +39,7 @@ export default function TextForm(props) {
         <div className="container-fluid border border-4 rounded rounded-5 mt-3 p-3">
             <h3 className={`text-${props.mode==='dark'?'light':'dark'}`}>Text Summary</h3>
             <p className={`text-${props.mode==='dark'?'light':'dark'}`}>
-                {text.split(" ").length} word(s) and {text.length} character with space
+                {text.split(" ").filter((element)=>{return element.length!==0}).length} word(s) and {text.length} character with space
                 <hr/>
 
                 {text.length>0?text:'Enter your text to preview here...'}
